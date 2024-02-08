@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flex with CSS! 💪</title>
+  <link href='../css/flex.css' rel='stylesheet' />
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono' rel='stylesheet'>
+</head>
+
+<body>
+  <h1>Inline-flex</h1>
+  <dl>
+    <dt>display: inline-flex</dt>
+    <dd>The display: inline-flex property creates an inline-level flex container. It allows the container to be displayed inline, while still maintaining flexbox behavior for its children.</dd>
+  </dl>
+  <div class='inlineflexcontainer'>
+    <div class='box'>
+      <h2>1</h2>
+    </div>
+    <div class='box'>
+      <h2>2</h2>
+    </div>
+    <div class='box'>
+      <h2>3</h2>
+    </div>
+  </div>
+  <div class='inlineflexcontainer'>
+    <div class='box'>
+      <h2>1</h2>
+    </div>
+    <div class='box'>
+      <h2>2</h2>
+    </div>
+    <div class='box'>
+      <h2>3</h2>
+    </div>
+  </div>
+  <h1>Flex</h1>
+  <dl>
+    <dt>display: flex</dt>
+    <dd>
+        The display: flex property creates a block-level flex container. It enables a flex context for all its direct children, which are called flex items. Flex items can be aligned, distributed, and ordered along the main and cross axes of the container. flex containers have two axes: a main axis and a cross axis. By default, the main axis is horizontal and the cross axis is vertical.
+
+        <br><br>The <strong>main axis</strong> is used to position flex items with the following properties:<br>
+        <ul>
+            <li>justify-content</li>
+            <li>flex-wrap</li>
+            <li>flex-grow</li>
+            <li>flex-shrink</li>
+        </ul>
+        
+        <br>The <strong>cross axis</strong> is used to position flex items with the following properties:<br>
+        <ul>
+            <li>align-items</li>
+            <li>align-content</li>
+        </ul>
+    </dd>
+  </dl>
+  <h2>Flex Start (Horizontal)</h2>
+  <dl>
+    <dt>justify-content: flex-start</dt>
+    <dd>The justify-content: flex-start property aligns the flex items at the beginning of the container along the main axis. This means that the items are packed flush to each other toward the edge of the alignment container depending on the flex container’s main-start side. This is the default value for the justify-content property.</dd>
+  </dl>
+  <div class='flexcontainer' id='flexstarthorizontal'>
+    <div class='box'></div>
+    <div class='box'></div>
+    <div class='box'></div>
+  </div>
+  <h2>Flex End (Horizontal)</h2>
+  <dl>
+    <dt>justify-content: flex-end</dt>
+    <dd>The justify-content: flex-end property aligns the flex items at the end of the container along the main axis. This means that the items are packed flush to each other toward the edge of the alignment container depending on the flex container’s main-end side.</dd>
+  </dl>
+  <div class='flexcontainer' id='flexendhorizontal'>
+    <div class='box'></div>
+    <div class='box'></div>
+    <div class='box'></div>
+  </div>
+  <h2>Center (Horizontal)</h2>
+  <dl>
+    <dt>justify-content: center</dt>
+    <dd>This aligns the flex items at the center of the container along the main axis. This means that the items are packed flush to each other toward the middle of the container.</dd>
+  </dl>
+  <div class='flexcontainer' id='centerhorizontal'>
+    <div class='box'></div>
+    <div class='box'></div>
+    <div class='box'></div>
+  </div>
+  <h2>Space Around (Horizontal)</h2>
+  <dl>
+    <dt>justify-content: space-around</dt>
+    <dd>This distributes the items evenly within the container along the main axis. The spacing between each pair of adjacent items is the same. The empty space before the first and after the last item equals half of the space between each pair of adjacent items.</dd>
+  </dl>
+  <div class='flexcontainer' id='spacearound'>
+    <div class='box'></div>
+    <div class='box'></div>
+    <div class='box'></div>
+  </div>
+  <h2>Space Between (Horizontal)</h2>
+  <dl>
+    <dt>justify-content: space-between</dt>
+    <dd>This distributes the items evenly within the container along the main axis. The first item is flush with the start edge, and the last item is flush with the end edge. The spacing between each pair of adjacent items is the same.</dd>
+  </dl>
+  <div class='flexcontainer' id='spacebetween'>
+    <div class='box'></div>
+    <div class='box'></div>
+    <div class='box'></div>
+  </div>
+  <h2>Flex Start (Vertical)</h2>
+  <dl>
+    <dt>align-items: flex-start</dt>
+    <dd>This aligns the flex items vertically up, flush against the flex container’s main-start or cross-start side.</dd>
+  </dl>
+  <div class='flexcontainer' id='flexstartvertical'>
+    <div class='left'></div>
+    <div class='center'></div>
+    <div class='right'></div>
+  </div>
+  <h2>Flex End (Vertical)</h2>
+  <dl>
+    <dt>align-items: flex-end</dt>
+    <dd>This aligns the flex items vertically down, flush against the flex container’s main-end or cross-end side.</dd>
+  </dl>
+  <div class='flexcontainer' id='flexendvertical'>
+    <div class='left'></div>
+    <div class='center'></div>
+    <div class='right'></div>
+  </div>
+  <h2>Center (Vertical)</h2>
+  <dl>
+    <dt>align-items: center</dt>
+    <dd>This aligns the flex items at the center of the container along the cross (vertical) axis. The items are packed flush to each other toward the middle of the container.</dd>
+  </dl>
+  <div class='flexcontainer' id='centervertical'>
+    <div class='left'></div>
+    <div class='center'></div>
+    <div class='right'></div>
+  </div>
+  <h2>Baseline (Vertical)</h2>
+  <dl>
+    <dt>align-items: baseline</dt>
+    <dd>This aligns the flex items such that their flex container baselines align. The item with the largest distance between its cross-start margin edge and its baseline is flushed with the cross-start edge of the line.</dd>
+  </dl>
+  <div class='flexcontainer' id='baseline'>
+    <div class='left'></div>
+    <div class='center'></div>
+    <div class='right'></div>
+  </div>
+  <h2>Stretch (Vertical)</h2>
+  <dl>
+    <dt>align-items: stretch</dt>
+    <dd>This stretches the flex items to fill the container, respecting the items’ width and height limits. If the items are smaller than the alignment container, auto-sized items will be equally enlarged to fill the container.</dd>
+  </dl>
+  <div class='flexcontainer' id='stretch'>
+    <div class='left'></div>
+    <div class='center'></div>
+    <div class='right'></div>
+  </div>
+  <h2>Flex-Grow</h2>
+  <dl>
+    <dt>flex-grow: &lt;factor&gt;</dt>
+    <dd>The flex-grow: &lt;factor&gt; property specifies how much a flex item will grow relative to the rest of the flex items in the same flex container. The &lt;factor&gt; is a positive number that represents the proportion of the available space that the item should take up. For example, if all items have flex-grow: 1, they will share the space equally. If one item has flex-grow: 2, it will take up twice as much space as the others. This property only applies to flex items, not to the flex container itself.</dd>
+  </dl>
+  <div class="flexgrow">
+    <h3>All grow proportinally</h3>
+    <div id='top'>
+      <div class='top side'>
+        <h3>1</h3>
+      </div>
+      <div class='top center'>
+        <h3>2</h3>
+      </div>
+      <div class='top side'>
+        <h3>3</h3>
+      </div>
+    </div>
+    <h3>Only center grows</h3>
+    <div id='middle'>
+      <div class='middle side'>
+        <h3>1</h3>
+      </div>
+      <div class='middle center'>
+        <h3>2</h3>
+      </div>
+      <div class='middle side'>
+        <h3>3</h3>
+      </div>
+    </div>
+    <h3>Center grows at twice the rate of sides</h3>
+    <div id='bottom'>
+      <div class='bottom side'>
+        <h3>1</h3>
+      </div>
+      <div class='bottom center'>
+        <h3>2</h3>
+      </div>
+      <div class='bottom side'>
+        <h3>3</h3>
+      </div>
+    </div>
+  </div>
+  <h2>Flex-Shrink</h2>
+  <dl>
+    <dt>flex-shrink: &lt;factor&gt;</dt>
+    <dd>The flex-shrink: &lt;factor&gt; property specifies how much a flex item will shrink relative to the rest of the flex items in the same flex container. The &lt;factor&gt; is a positive number that represents the proportion of the space that the item should give up when the container is too small. For example, if all items have flex-shrink: 1, they will shrink equally. If one item has flex-shrink: 2, it will shrink twice as much as the others. This property only applies to flex items, not to the flex container itself3.</dd>
+  </dl>
+  <div class="flexshrink">
+    <h3>Sides shrink at twice the rate of center</h3>
+    <div id='top'>
+      <div class='top side'>
+        <h3>1</h3>
+      </div>
+      <div class='top center'>
+        <h3>2</h3>
+      </div>
+      <div class='top side'>
+        <h3>3</h3>
+      </div>
+    </div>
+    <h3>Only center shrinks</h3>
+    <div id='middle'>
+      <div class='middle side'>
+        <h3>1</h3>
+      </div>
+      <div class='middle center'>
+        <h3>2</h3>
+      </div>
+      <div class='middle side'>
+        <h3>3</h3>
+      </div>
+    </div>
+    <h3>Center shrinks at twice the rate of sides</h3>
+    <div id='bottom'>
+      <div class='bottom side'>
+        <h3>1</h3>
+      </div>
+      <div class='bottom center'>
+        <h3>2</h3>
+      </div>
+      <div class='bottom side'>
+        <h3>3</h3>
+      </div>
+    </div>
+  </div>
+  <h2>Flex-Basis</h2>
+  <dl>
+    <dt>flex-basis: &lt;length&gt;</dt>
+    <dd>The flex-basis: &lt;length&gt; property specifies the initial size of a flex item along the main axis, before any remaining space is distributed according to the flex-grow and flex-shrink properties. The &lt;length&gt; can be a fixed value, a percentage, or one of the keywords auto, content, max-content, min-content, or fit-content. This property only applies to flex items, not to the flex container itself</dd>
+  </dl>
+  <div class="Flex Basis">
+    <h3>Grows</h3>
+    <div id='grows'>
+      <div class='grow side'>
+        <h3>1</h3>
+      </div>
+      <div class='grow center'>
+        <h3>2</h3>
+      </div>
+      <div class='grow side'>
+        <h3>3</h3>
+      </div>
+    </div>
+    <h3>Shrinks</h3>
+    <div id='shrinks'>
+      <div class='shrink side'>
+        <h3>1</h3>
+      </div>
+      <div class='shrink center'>
+        <h3>2</h3>
+      </div>
+      <div class='shrink side'>
+        <h3>3</h3>
+      </div>
+    </div>
+  </div>
+  <h2>Flex (Shorthand)</h2>
+  <dl>
+    <dt>flex: &lt;flex-grow&gt; &lt;flex-shrink&gt; &lt;flex-basis&gt;</dt>
+    <dd>The shorthand flex property provides a convenient way for specifying how elements stretch and shrink, while simplifying the CSS required. The flex property allows you to declare flex-grow, flex-shrink, and flex-basis all in one line.</dd>
+  </dl>
+  <h3>Above</h3>
+  <div class='flexcontainer' id='above'>
+    <div class='side'></div>
+    <div class='center'></div>
+    <div class='side'></div>
+  </div>
+  <h3>Below</h3>
+  <div class='flexcontainer' id='below'>
+    <div class='side'></div>
+    <div class='center'></div>
+    <div class='side'></div>
+  </div>
+  <h2>Flex-Wrap: Wrap</h2>
+  <dl>
+    <dt>flex-wrap: wrap</dt>
+    <dd></dd>
+  </dl>
+  <div class='flexcontainer' id='wrap'>
+    <div class='box'>
+      <h3>1</h3>
+    </div>
+    <div class='box'>
+      <h3>2</h3>
+    </div>
+    <div class='box'>
+      <h3>3</h3>
+    </div>
+    <div class='box'>
+      <h3>4</h3>
+    </div>
+    <div class='box'>
+      <h3>5</h3>
+    </div>
+  </div>
+  <h2>Flex-Wrap: No Wrap</h2>
+  <dl>
+    <dt>flex-wrap: nowrap</dt>
+    <dd>Prevents items from wrapping; this is the default value and is only necessary to override a wrap value set by a different CSS rule.</dd>
+  </dl>
+  <div class='flexcontainer' id='nowrap'>
+    <div class='box'>
+      <h3>1</h3>
+    </div>
+    <div class='box'>
+      <h3>2</h3>
+    </div>
+    <div class='box'>
+      <h3>3</h3>
+    </div>
+    <div class='box'>
+      <h3>4</h3>
+    </div>
+    <div class='box'>
+      <h3>5</h3>
+    </div>
+  </div>
+  <h2>Flex-Wrap: Wrap Reverse</h2>
+  <dl>
+    <dt>flex-wrap: wrap-reverse</dt>
+    <dd>The same functionality as wrap, but the order of rows within a flex container is reversed (for example, in a 2-row flexbox, the first row from a wrap container will become the second in wrap-reverse and the second row from the wrap container will become the first in wrap-reverse)</dd>
+  </dl>
+  <div class='flexcontainer' id='reverse'>
+    <div class='box'>
+      <h3>1</h3>
+    </div>
+    <div class='box'>
+      <h3>2</h3>
+    </div>
+    <div class='box'>
+      <h3>3</h3>
+    </div>
+    <div class='box'>
+      <h3>4</h3>
+    </div>
+    <div class='box'>
+      <h3>5</h3>
+    </div>
+  </div>
+  <h1>Align Content</h1>
+  <h2>Flex Start</h2>
+  <dl>
+    <dt>align-content: flex-start</dt>
+    <dd>All rows of elements will be positioned at the top of the parent container with no extra space between.</dd>
+  </dl>
+  <div class='tallcontainer' id='flexstart'>
+    <div class='wideitem'></div>
+    <div class='wideitem'></div>
+    <div class='wideitem'></div>
+  </div>
+  <h2>Flex End</h2>
+  <dl>
+    <dt>align-content: flex-end</dt>
+    <dd>All rows of elements will be positioned at the bottom of the parent container with no extra space between.</dd>
+  </dl>
+  <div class='tallcontainer' id='flexend'>
+    <div class='wideitem'></div>
+    <div class='wideitem'></div>
+    <div class='wideitem'></div>
+  </div>
+  <h2>Center</h2>
+  <dl>
+    <dt>align-content: center</dt>
+    <dd>All rows of elements will be positioned at the center of the parent element with no extra space between.</dd>
+  </dl>
+  <div class='tallcontainer' id='center'>
+    <div class='wideitem'></div>
+    <div class='wideitem'></div>
+    <div class='wideitem'></div>
+  </div>
+  <h2>Space Between</h2>
+  <dl>
+    <dt>align-content: space-between</dt>
+    <dd>All rows of elements will be spaced evenly from the top to the bottom of the container with no space above the first or below the last.</dd>
+  </dl>
+  <div class='tallcontainer' id='between'>
+    <div class='wideitem'></div>
+    <div class='wideitem'></div>
+    <div class='wideitem'></div>
+  </div>
+  <h2>Space Around</h2>
+  <dl>
+    <dt>align-content: space-around</dt>
+    <dd>All rows of elements will be spaced evenly from the top to the bottom of the container with the same amount of space at the top and bottom and between each element.</dd>
+  </dl>
+  <div class='tallcontainer' id='around'>
+    <div class='wideitem'></div>
+    <div class='wideitem'></div>
+    <div class='wideitem'></div>
+  </div>
+  <h2>Stretch</h2>
+  <dl>
+    <dt>A conditional state...</dt>
+    <dd>If a minimum height or no height is specified, the rows of elements will stretch to fill the parent container from top to bottom (default value)</dd>
+  </dl>
+  <div class='tallcontainer' id='stretch'>
+    <div class='wideitem'></div>
+    <div class='wideitem'></div>
+    <div class='wideitem'></div>
+  </div>
+  <h1>Flex Direction</h1>
+  <p>The main axis and cross axis are interchangeable. We can switch them using the flex-direction property. If we add the flex-direction property and give it a value of column, the flex items will be ordered vertically, not horizontally.</p>
+  <h2>Row</h2>
+  <dl>
+    <dt>flex-direction: row</dt>
+    <dd>Elements will be positioned from left to right across the parent element starting from the top left corner (default).</dd>
+  </dl>
+  <div class='bluecontainer' id='row'>
+    <div class='squarebox'>
+      <h3>1</h3>
+    </div>
+    <div class='squarebox'>
+      <h3>2</h3>
+    </div>
+    <div class='squarebox'>
+      <h3>3</h3>
+    </div>
+    <div class='squarebox'>
+      <h3>4</h3>
+    </div>
+    <div class='squarebox'>
+      <h3>5</h3>
+    </div>
+  </div>
+  <h2>Row-Reverse</h2>
+  <dl>
+    <dt>flex-direction: row-reverse</dt>
+    <dd>Elements will be positioned from right to left across the parent element starting from the top right corner.</dd>
+  </dl>
+  <div class='bluecontainer' id='row-reverse'>
+    <div class='squarebox'>
+      <h3>1</h3>
+    </div>
+    <div class='squarebox'>
+      <h3>2</h3>
+    </div>
+    <div class='squarebox'>
+      <h3>3</h3>
+    </div>
+    <div class='squarebox'>
+      <h3>4</h3>
+    </div>
+    <div class='squarebox'>
+      <h3>5</h3>
+    </div>
+  </div>
+  <h2>Column</h2>
+  <dl>
+    <dt>flex-direction: column</dt>
+    <dd>Elements will be positioned from top to bottom of the parent element starting from the top left corner.</dd>
+  </dl>
+  <div class='bluecontainer' id='column'>
+    <div class='squarebox'>
+      <h3>1</h3>
+    </div>
+    <div class='squarebox'>
+      <h3>2</h3>
+    </div>
+    <div class='squarebox'>
+      <h3>3</h3>
+    </div>
+    <div class='squarebox'>
+      <h3>4</h3>
+    </div>
+    <div class='squarebox'>
+      <h3>5</h3>
+    </div>
+  </div>
+  <h2>Column-Reverse</h2>
+  <dl>
+    <dt>flex-direction: column-reverse</dt>
+    <dd>Elements will be positioned from the bottom to the top of the parent element starting from the bottom left corner.</dd>
+  </dl>
+  <div class='bluecontainer' id='column-reverse'>
+    <div class='squarebox'>
+      <h3>1</h3>
+    </div>
+    <div class='squarebox'>
+      <h3>2</h3>
+    </div>
+    <div class='squarebox'>
+      <h3>3</h3>
+    </div>
+    <div class='squarebox'>
+      <h3>4</h3>
+    </div>
+    <div class='squarebox'>
+      <h3>5</h3>
+    </div>
+  </div>
+  <h1>Flex Flow</h1>
+  <dl>
+    <dt>flex-flow: &lt;flex-direction&gt; &lt;flex-wrap&gt;</dt>
+    <dd>Like the shorthand flex property, the shorthand flex-flow property is used to declare both the flex-wrap and flex-direction properties in one line. The first value in the flex-flow declaration is a flex-direction value and the second is a flex-wrap value. All values for flex-direction and flex-wrap are accepted.</dd>
+  </dl>
+  <h2>flex-flow: row wrap</h2>
+  <div class='bluecontainer' id='rowwrap'>
+    <div class='bigbox'>
+      <h3>1</h3>
+    </div>
+    <div class='bigbox'>
+      <h3>2</h3>
+    </div>
+    <div class='bigbox'>
+      <h3>3</h3>
+    </div>
+    <div class='bigbox'>
+      <h3>4</h3>
+    </div>
+    <div class='bigbox'>
+      <h3>5</h3>
+    </div>
+  </div>
+  <h2>flex-flow: row-reverse wrap-reverse</h2>
+  <div class='bluecontainer' id='row-wrap-reverse'>
+    <div class='bigbox'>
+      <h3>1</h3>
+    </div>
+    <div class='bigbox'>
+      <h3>2</h3>
+    </div>
+    <div class='bigbox'>
+      <h3>3</h3>
+    </div>
+    <div class='bigbox'>
+      <h3>4</h3>
+    </div>
+    <div class='bigbox'>
+      <h3>5</h3>
+    </div>
+  </div>
+  <h2>flex-flow: column wrap</h2>
+  <div class='bluecontainer' id='columnwrap'>
+    <div class='bigbox'>
+      <h3>1</h3>
+    </div>
+    <div class='bigbox'>
+      <h3>2</h3>
+    </div>
+    <div class='bigbox'>
+      <h3>3</h3>
+    </div>
+    <div class='bigbox'>
+      <h3>4</h3>
+    </div>
+    <div class='bigbox'>
+      <h3>5</h3>
+    </div>
+  </div>
+  <h2>flex-flow: column-reverse wrap-reverse</h2>
+  <div class='bluecontainer' id='col-wrap-reverse'>
+    <div class='bigbox'>
+      <h3>1</h3>
+    </div>
+    <div class='bigbox'>
+      <h3>2</h3>
+    </div>
+    <div class='bigbox'>
+      <h3>3</h3>
+    </div>
+    <div class='bigbox'>
+      <h3>4</h3>
+    </div>
+    <div class='bigbox'>
+      <h3>5</h3>
+    </div>
+  </div>
+</body>
+</html>
